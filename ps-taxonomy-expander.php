@@ -91,7 +91,7 @@ function replace_check2radio_taxonomy_scripts() {
 
 	if ( $taxonomies ) {
 		foreach ( $taxonomies as $label => $obj ) {
-			if ( $obj->show_ui && $obj->hierarchical && $obj->public && in_array( $obj->name, $this->single_taxonomies ) ) {
+			if ( $obj->show_ui && $obj->hierarchical && in_array( $obj->name, $this->single_taxonomies ) ) {
 					echo <<< EOF
 <script type="text/javascript">
 	//<![CDATA[
@@ -123,7 +123,7 @@ $post_type = isset( $_GET['post_type'] ) ? $_GET['post_type'] : 'post';
 $taxonomies = get_object_taxonomies( $post_type, 'object' );
 if ( $taxonomies ) {
 	foreach ( $taxonomies as $label => $obj ) {
-		if ( $obj->show_ui && $obj->hierarchical && $obj->public && in_array( $obj->name, $this->single_taxonomies ) ) {
+		if ( $obj->show_ui && $obj->hierarchical && in_array( $obj->name, $this->single_taxonomies ) ) {
 echo <<< EOF
 <script type="text/javascript">
 	//<![CDATA[
@@ -187,7 +187,7 @@ function add_style_hide_add_category() {
 <!--
 <?php
 foreach  ( $taxonomies as  $label  => $obj  ) {
-	if  ( $obj->show_ui && $obj->hierarchical  && $obj->public  && in_array (  $obj->name, $this->single_taxonomies ) ) {
+	if  ( $obj->show_ui && $obj->hierarchical  && in_array (  $obj->name, $this->single_taxonomies ) ) {
 ?>
 #<?php echo esc_html (  $label  ); ?>-adder {
 	display: none;
@@ -251,7 +251,7 @@ function default_term_setting_field( $args ) {
 
 
 function single_taxonomies_filed() {
-	$taxonomies = get_taxonomies( array( 'hierarchical' => true, 'public' => true, 'show_ui' => true ), false );
+	$taxonomies = get_taxonomies( array( 'hierarchical' => true, 'show_ui' => true ), false );
 ?>
 
 <p><?php _e( 'check the taxonomy box to turn into single selection.', 'ps-taxonomy-expander' ) ?></p>
@@ -271,7 +271,7 @@ $checked = $this->single_taxonomies && in_array( $obj->name, $this->single_taxon
 
 
 function check_single_taxonomies_postdata() {
-	$taxonomies = get_taxonomies( array( 'hierarchical' => true, 'public' => true, 'show_ui' => true ) );
+	$taxonomies = get_taxonomies( array( 'hierarchical' => true, 'show_ui' => true ) );
 	if ( isset( $_POST['single_taxonomies'] ) ) {
 		if ( is_array( $_POST['single_taxonomies'] ) ) {
 			foreach ( $_POST['single_taxonomies'] as $key => $val ) {
@@ -466,7 +466,7 @@ function join_media_taxonomy_datas() {
 function display_taxonomy_post_count() {
 	$user = wp_get_current_user();
 	if ( isset( $user->disp_tax_right_now ) && $user->disp_tax_right_now ) {
-		$taxonomies = get_taxonomies( array( 'public' => true, 'show_ui' => true, '_builtin' => false ), false );
+		$taxonomies = get_taxonomies( array( 'show_ui' => true, '_builtin' => false ), false );
 		if ( count( $taxonomies ) ) {
 			foreach ( $taxonomies as $tax_slug => $taxonomy ) {
 				$num = wp_count_terms( $tax_slug );
@@ -492,7 +492,7 @@ function display_taxonomy_post_count() {
 
 function add_taxonomy_count_dashboard_right_now_field() {
 	global $profileuser;
-	$taxonomies = get_taxonomies( array( 'public' => true, 'show_ui' => true, '_builtin' => false ) );
+	$taxonomies = get_taxonomies( array( 'show_ui' => true, '_builtin' => false ) );
 	if ( count( $taxonomies ) ) {
 		?>
 <tr>
@@ -511,7 +511,7 @@ function add_taxonomy_count_dashboard_right_now_field() {
 
 
 function update_taxonomy_count_dashboard_right_now( $user_id, $old_user_data ) {
-	$taxonomies = get_taxonomies( array( 'public' => true, 'show_ui' => true, '_builtin' => false ) );
+	$taxonomies = get_taxonomies( array( 'show_ui' => true, '_builtin' => false ) );
 	if ( count( $taxonomies ) ) {
 		if ( isset( $_POST['disp_tax_right_now'] ) && ( ! isset( $old_user_data->disp_tax_right_now ) || ! $old_user_data->disp_tax_right_now ) ) {
 			update_user_meta( $user_id, 'disp_tax_right_now', 1 );
@@ -572,7 +572,7 @@ function term_order_page( $taxonomy ) {
 		}
 	}
 
-	$taxonomies = get_taxonomies( array( 'public' => true, 'hierarchical' => true, 'show_ui' => true ), false );
+	$taxonomies = get_taxonomies( array( 'hierarchical' => true, 'show_ui' => true ), false );
 
 	if ( isset( $_GET['taxonomy'] ) && taxonomy_exists( $_GET['taxonomy'] ) ) {
 		$this->current_taxonomy = get_taxonomy( $_GET['taxonomy'] );
