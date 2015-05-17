@@ -4,7 +4,7 @@
  Plugin URI: http://www.warna.info/archives/451/
  Description: PS Taxonomy Expander makes easy to use categories, tags and custom taxonomies on editing posts.
  Author: Hitoshi Omagari
- Version: 1.1.9
+ Version: 1.2.0
  License: GPLv2 or later
  Text Domain: ps-taxonomy-expander
  Domain Path: /language/
@@ -12,7 +12,7 @@
 
 
 class PS_Taxonomy_Expander {
-	var $version = '1.1.9';
+	var $version = '1.2.0';
 	var $single_taxonomies;
 	var $edit_post_type;
 	var $disp_taxonomies;

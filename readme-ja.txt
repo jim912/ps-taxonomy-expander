@@ -1,9 +1,9 @@
 === PS Taxonomy Expander ===
-Contributors: jim912
+Contributors: jim912, gatespace
 Tags: category, tag, taxonomy, custom taxonomy
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.1.9
+Tested up to: 3.9
+Stable tag: 1.2.0
 
 カテゴリー、タグ、カスタム分類の使い勝手を向上させます。
 
@@ -32,6 +32,8 @@ PS Taxonomy Expanderは、カテゴリー・タグ、そしてカスタム分類
 3. 投稿設定で分類の登録方法、初期分類、一覧表示への追加の設定ができます。Term orderメニューでは、順序指定が可能です。
 
 == Changelog ==
+= 1.2.0 =
+* WordPress 3.9 対応、非公開の投稿タイプでも単一選択ができるように変更
 = 1.1.9 =
 * WordPress 3.8 対応
 * Advanced Custom Fields との競合を解消

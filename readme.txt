@@ -1,9 +1,9 @@
 === PS Taxonomy Expander ===
-Contributors: jim912
+Contributors: jim912, gatespace
 Tags: category, tag, taxonomy, custom taxonomy
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.1.9
+Tested up to: 3.9
+Stable tag: 1.2.0
 
 Makes categories, tags and custom taxonomies more useful.
 
@@ -32,6 +32,10 @@ PS Taxonomy Expander makes easy to use categories, tags and custom taxonomies on
 3. You can specify taxonomy selection, default taxonomy and display taxonomies on All posts. You can specify order of taxonomies on Term order menu.
 
 == Changelog ==
+= 1.2.0 =
+* Compatible up to: 3.9
+* Hidden post_type can regist taxonomy with radio button.
+
 = 1.1.9 =
 * Compatible up to: 3.6
 * Fix: Conflict with "Advanced Custom Fields"
@@ -77,7 +81,7 @@ PS Taxonomy Expander makes easy to use categories, tags and custom taxonomies on
 
 == Screenshots ==
 1. Registering taxonomies with hierachy on radio button.
-2. 
+2. You Can chose Default term(ex.Category) 
 3. Custom taxonomies menu and registration on Media.
 4. Displaying custom taxonomies on Right Now.
 5. Setting screen of term order.
