@@ -1,5 +1,5 @@
 === PS Taxonomy Expander ===
-Contributors: jim912, gatespace
+Contributors: jim912, gatespace, kuck1u
 Tags: category, tag, taxonomy, custom taxonomy
 Requires at least: 3.0
 Tested up to: 4.2.2
@@ -33,7 +33,7 @@ PS Taxonomy Expander makes easy to use categories, tags and custom taxonomies on
 
 == Changelog ==
 = 1.2.1 =
-* Fixed Warning and Notice errors.
+* Fixed a notice error.
 
 = 1.2.0 =
 * Compatible up to: 3.9

@@ -1,5 +1,5 @@
 === PS Taxonomy Expander ===
-Contributors: jim912, gatespace
+Contributors: jim912, gatespace, kuck1u
 Tags: category, tag, taxonomy, custom taxonomy
 Requires at least: 3.0
 Tested up to: 4.2.2
@@ -33,7 +33,7 @@ PS Taxonomy Expanderは、カテゴリー・タグ、そしてカスタム分類
 
 == Changelog ==
 = 1.2.1 =
-* Worning、および Notice エラーを修正
+* Notice を修正
 = 1.2.0 =
 * WordPress 3.9 対応、非公開の投稿タイプでも単一選択ができるように変更
 = 1.1.9 =
