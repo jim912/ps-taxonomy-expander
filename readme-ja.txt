@@ -33,7 +33,7 @@ PS Taxonomy Expanderは、カテゴリー・タグ、そしてカスタム分類
 
 == Changelog ==
 = 1.2.1 =
-* Notice を修正
+* Worning、および Notice エラーを修正
 = 1.2.0 =
 * WordPress 3.9 対応、非公開の投稿タイプでも単一選択ができるように変更
 = 1.1.9 =

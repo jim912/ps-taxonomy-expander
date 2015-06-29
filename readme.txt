@@ -33,7 +33,7 @@ PS Taxonomy Expander makes easy to use categories, tags and custom taxonomies on
 
 == Changelog ==
 = 1.2.1 =
-* Fixed a notice error.
+* Fixed Warning and Notice errors.
 
 = 1.2.0 =
 * Compatible up to: 3.9
