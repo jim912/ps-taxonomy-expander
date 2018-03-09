@@ -905,7 +905,6 @@ EOF;
 						'orderby'         => 'name',
 						'selected'        => get_query_var( $tax_slug ),
 						'taxonomy'        => $tax_slug,
-						'name'            => $tax_slug
 					);
 					$this->dropdown_taxonomies( $dropdown_options );
 				}
@@ -922,7 +921,7 @@ EOF;
 			'hide_empty'       => 1, 'child_of' => 0,
 			'exclude'          => '', 'echo' => 1,
 			'selected'         => 0, 'hierarchical' => 0,
-			'name'             => 'cat', 'id' => '',
+			'fields'           => 'all', 'id' => '',
 			'class'            => 'postform', 'depth' => 0,
 			'tab_index'        => 0, 'taxonomy' => 'category',
 			'hide_if_empty'    => false
@@ -951,7 +950,7 @@ EOF;
 		}
 
 		$categories = get_terms( $taxonomy, $r );
-		$name       = esc_attr( $name );
+		$name       = esc_attr( $args['taxonomy'] );
 		$class      = esc_attr( $class );
 		$id         = $id ? esc_attr( $id ) : $name;
 
