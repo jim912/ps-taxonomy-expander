@@ -2,7 +2,7 @@
 Contributors: jim912, gatespace, kuck1u
 Tags: category, tag, taxonomy, custom taxonomy
 Requires at least: 3.0
-Tested up to: 4.5
+Tested up to: 4.9.4
 Stable tag: 1.2.3
 
 カテゴリー、タグ、カスタム分類の使い勝手を向上させます。
