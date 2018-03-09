@@ -594,7 +594,7 @@ EOF;
 		}
 		$have_children = $wpdb->get_results( "SELECT t.term_id, t.name FROM $wpdb->term_taxonomy tt, $wpdb->terms t, $wpdb->term_taxonomy tt2 WHERE tt.parent = $parent AND tt.taxonomy = '{$this->current_taxonomy->name}' AND t.term_id = tt.term_id AND tt2.parent = tt.term_id GROUP BY t.term_id, t.name HAVING COUNT(*) > 0 ORDER BY t.term_order ASC" );
 		?>
-		<div class="wrap"><?php screen_icon( 'term-order' ); ?>
+		<div class="wrap">
 			<h2><?php _e( 'Term order', 'ps-taxonomy-expander' ); ?></h2>
 			<ul id="taxonomies_tab">
 				<?php if ( ! empty( $taxonomies ) ) : foreach ( $taxonomies as $tax_slug => $taxonomy ) :
